@@ -2,7 +2,7 @@
 
 import { FaWhatsapp } from "react-icons/fa";
 
-const WHATSAPP_NUMBER = "34646740176"; // TODO: confirmar número
+const WHATSAPP_NUMBER = "346467401765"; // TODO: confirmar número
 
 export default function StickyWhatsApp() {
   const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(

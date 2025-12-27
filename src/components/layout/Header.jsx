@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { FaWhatsapp, FaPhoneAlt, FaBars, FaTimes } from "react-icons/fa";
 
-const WHATSAPP_NUMBER = "34646740176"; // TODO: replace
+const WHATSAPP_NUMBER = "346467401765"; // TODO: replace
 const PHONE_NUMBER = "922256767"; // TODO: replace
 
 const navLinks = [

@@ -47,8 +47,10 @@ export default function ContactSection() {
               <FaMapMarkerAlt className="text-[var(--primary)]" /> Ubicación
             </p>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              La Laguna, Tenerife <br />
-              (Ponemos la dirección exacta acá)
+              C/. El Juego-Pasaje <br />
+              Tunel de Aguere-Local 3º Derecha.
+              <br />
+              38201 San Cristobal de La Laguna, Tenerife
             </p>
           </div>
         </div>

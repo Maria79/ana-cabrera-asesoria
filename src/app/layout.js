@@ -1,6 +1,16 @@
-import { ClerkProvider } from "@clerk/nextjs";
-import Script from "next/script";
 import "./globals.css";
+import localFont from "next/font/local";
+
+const geistSans = localFont({
+  src: "./fonts/GeistVF.woff",
+  variable: "--font-geist-sans",
+  weight: "100 900",
+});
+const geistMono = localFont({
+  src: "./fonts/GeistMonoVF.woff",
+  variable: "--font-geist-mono",
+  weight: "100 900",
+});
 
 export const metadata = {
   title: "CyB Gestión Laguna SL",
@@ -10,15 +20,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[var(--bg)] text-[var(--text)]`}
-      >
-        <Header />
-        {children}
-        <Footer />
-        <StickyWhatsApp />
-      </body>
+    <html lang="es">
+      <body>{children}</body>
     </html>
   );
 }
@@ -45,7 +48,7 @@ export default function RootLayout({ children }) {
         longitude: "-16.3159",
       },
       url: "https://tudominio.com",
-      telephone: "+34 922 256 767",
+      telephone: "+34 922 256 7675",
       priceRange: "€€",
       openingHours: "Mo-Fr 08:00-14:00",
       areaServed: "Tenerife",

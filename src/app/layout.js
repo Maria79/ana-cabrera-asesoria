@@ -29,14 +29,14 @@ export default function RootLayout({ children }) {
     __html: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "AccountingService",
-      name: "Fernández & Rodríguez",
+      name: "CyB Gestión",
       image: "https://tudominio.com/og-image.jpg", // opcional
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Calle ________", // completar
+        streetAddress: "C/. El Juego-Pasaje Tunel de Aguere-Local 3º Derecha", // completar
         addressLocality: "San Cristóbal de La Laguna",
         addressRegion: "Santa Cruz de Tenerife",
-        postalCode: "38XXX",
+        postalCode: "38201",
         addressCountry: "ES",
       },
       geo: {
@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
       url: "https://tudominio.com",
       telephone: "+34 922 256 767",
       priceRange: "€€",
-      openingHours: "Mo-Fr 09:00-17:00",
+      openingHours: "Mo-Fr 08:00-14:00",
       areaServed: "Tenerife",
       sameAs: [
         "https://www.google.com/maps?cid=XXXXXXXX", // cuando lo tengáis

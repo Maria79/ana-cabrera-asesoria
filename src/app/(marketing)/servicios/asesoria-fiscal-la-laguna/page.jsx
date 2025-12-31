@@ -1,12 +1,12 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Contabilidad para autónomos en Tenerife | Fernández & Rodríguez",
+  title: "Asesoría fiscal en La Laguna (Tenerife) | CyB Gestión",
   description:
-    "Gestión contable para autónomos y pequeñas empresas en Tenerife. Libros, cierres y soporte contable con claridad.",
+    "Asesoría fiscal en La Laguna, Tenerife. Impuestos, modelos, renta, sociedades y alquileres. Atención clara y personalizada.",
 };
 
-export default function ContabilidadAutonomosPage() {
+export default function AsesoriaFiscalPage() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-14">
       <Link
@@ -17,11 +17,11 @@ export default function ContabilidadAutonomosPage() {
       </Link>
 
       <h1 className="mt-4 text-3xl font-semibold text-[var(--text)]">
-        Contabilidad para autónomos en Tenerife
+        Asesoría fiscal en La Laguna
       </h1>
       <p className="mt-3 max-w-3xl text-[var(--muted)]">
-        Orden, control y seguimiento contable para que tengas visibilidad y
-        cumplas con tus obligaciones sin estrés.
+        Gestión fiscal para autónomos, empresas y particulares en Tenerife. Te
+        ayudamos a presentar todo en fecha y con claridad.
       </p>
 
       <section className="mt-10 grid gap-4 md:grid-cols-2">
@@ -30,10 +30,11 @@ export default function ContabilidadAutonomosPage() {
             Qué incluye
           </h2>
           <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-[var(--muted)]">
-            <li>Organización contable y soporte</li>
-            <li>Libros y cierres (según corresponda)</li>
-            <li>Control y revisión de documentación</li>
-            <li>Coordinación con fiscalidad</li>
+            <li>Modelos trimestrales y anuales</li>
+            <li>Renta y declaraciones informativas</li>
+            <li>Impuesto de sociedades (si aplica)</li>
+            <li>Alquileres e impuestos asociados</li>
+            <li>Revisión y planificación básica</li>
           </ul>
         </div>
 
@@ -42,19 +43,20 @@ export default function ContabilidadAutonomosPage() {
             Casos típicos
           </h2>
           <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-[var(--muted)]">
-            <li>“Quiero llevar mis cuentas al día”</li>
-            <li>“Necesito ordenar gastos e ingresos”</li>
-            <li>“Quiero evitar errores en presentaciones”</li>
+            <li>“Soy autónomo y tengo modelos trimestrales”</li>
+            <li>“Tengo dudas con impuestos por alquileres”</li>
+            <li>“Quiero estar al día y evitar errores”</li>
+            <li>“Necesito revisar una declaración”</li>
           </ul>
         </div>
       </section>
 
       <div className="mt-10 rounded-2xl border border-[var(--border)] bg-[var(--bg)] p-6">
         <h3 className="text-base font-semibold text-[var(--text)]">
-          ¿Hablamos de tu contabilidad?
+          ¿Querés que revisemos tu caso?
         </h3>
         <p className="mt-2 text-sm text-[var(--muted)]">
-          Escribinos y te orientamos según tu situación.
+          Escribinos por WhatsApp o dejá tu consulta y te respondemos.
         </p>
         <Link
           href="/contacto"

@@ -7,8 +7,7 @@ import FaqSection from "@/components/sections/FaqSection";
 import FaqSchema from "@/components/seo/FaqSchema";
 
 export const metadata = {
-  title:
-    "Asesoría fiscal, contable y laboral en La Laguna | Fernández & Rodríguez",
+  title: "Asesoría fiscal, contable y laboral en La Laguna | CyB Gestión",
   description:
     "Asesoría fiscal, contable y laboral en La Laguna, Tenerife. Especialistas en IGIC, renta, autónomos y empresas. Nueva dirección: Ana Cabrera.",
   keywords: [
@@ -19,7 +18,7 @@ export const metadata = {
     "asesoría laboral Tenerife",
   ],
   openGraph: {
-    title: "Fernández & Rodríguez | Asesoría en La Laguna",
+    title: "CyB Gestión | Asesoría en La Laguna",
     description:
       "IGIC, renta, autónomos y empresas en La Laguna, Tenerife. Atención clara y cercana.",
     locale: "es_ES",

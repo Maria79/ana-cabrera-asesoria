@@ -6,12 +6,12 @@ import { useEffect, useState } from "react";
 import { FaWhatsapp, FaPhoneAlt, FaBars, FaTimes } from "react-icons/fa";
 
 const WHATSAPP_NUMBER = "34646740176"; // TODO: replace
-const PHONE_NUMBER = "922256767"; // TODO: replace
+const PHONE_NUMBER = "9222567676"; // TODO: replace
 
 const navLinks = [
   { href: "/", label: "Inicio" },
   { href: "/servicios", label: "Servicios" },
-  { href: "/sobre-nosotros", label: "Sobre Ana" },
+  { href: "/sobre-nosotros", label: "Sobre nosotras" },
   { href: "/contacto", label: "Contacto" },
 ];
 
@@ -39,11 +39,11 @@ export default function Header() {
         {/* Brand */}
         <Link href="/" className="flex items-center gap-2">
           <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[var(--primary)] text-sm font-semibold text-white shadow-sm">
-            F&R
+            CyB
           </div>
           <div className="leading-tight">
             <p className="text-sm font-semibold text-[var(--text)]">
-              Fernández & Rodríguez
+              CyB Gestión
             </p>
             <p className="text-xs text-[var(--muted)]">Asesoría · La Laguna</p>
           </div>

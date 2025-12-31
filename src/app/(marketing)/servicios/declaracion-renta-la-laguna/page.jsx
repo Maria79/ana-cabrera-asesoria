@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Declaración de la renta en La Laguna | Fernández & Rodríguez",
+  title: "Declaración de la renta en La Laguna | CyB Gestión",
   description:
     "Declaración de la renta en La Laguna, Tenerife. Preparación, revisión y presentación con atención clara y personalizada.",
 };

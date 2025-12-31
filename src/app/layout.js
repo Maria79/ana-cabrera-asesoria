@@ -1,71 +1,55 @@
-import localFont from "next/font/local";
+import { ClerkProvider } from "@clerk/nextjs";
+import Script from "next/script";
 import "./globals.css";
 
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import StickyWhatsApp from "@/components/layout/StickyWhatsApp";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
-
 export const metadata = {
-  title: "Fernández & Rodríguez | Asesoría en La Laguna",
+  title: "CyB Gestión Laguna SL",
   description:
     "Asesoría fiscal, contable y laboral en La Laguna, Tenerife. IGIC, renta, autónomos y empresas.",
 };
 
 export default function RootLayout({ children }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "AccountingService",
+    name: "CyB Gestión",
+    image: "https://tudominio.com/og-image.jpg",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Calle El Juego-Pasaje Tunel de Aguere-Local 3º Derecha",
+      addressLocality: "San Cristóbal de La Laguna",
+      addressRegion: "Santa Cruz de Tenerife",
+      postalCode: "38201",
+      addressCountry: "ES",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "28.4874",
+      longitude: "-16.3159",
+    },
+    url: "https://tudominio.com",
+    telephone: "+34 922 256 767",
+    priceRange: "€€",
+    openingHours: "Mo-Fr 08:00-14:00",
+    areaServed: "Tenerife",
+    sameAs: ["https://www.google.com/maps?cid=XXXXXXXX"],
+  };
+
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[var(--bg)] text-[var(--text)]`}
-      >
-        <Header />
-        {children}
-        <Footer />
-        <StickyWhatsApp />
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="es">
+        <body>
+          {/* JSON-LD (LocalBusiness/AccountingService) */}
+          <Script
+            id="localbusiness-jsonld"
+            type="application/ld+json"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          />
+
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
-
-<script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "AccountingService",
-      name: "Fernández & Rodríguez",
-      image: "https://tudominio.com/og-image.jpg", // opcional
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Calle ________", // completar
-        addressLocality: "San Cristóbal de La Laguna",
-        addressRegion: "Santa Cruz de Tenerife",
-        postalCode: "38XXX",
-        addressCountry: "ES",
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: "28.4874", // opcional
-        longitude: "-16.3159",
-      },
-      url: "https://tudominio.com",
-      telephone: "+34 922 256 767",
-      priceRange: "€€",
-      openingHours: "Mo-Fr 09:00-17:00",
-      areaServed: "Tenerife",
-      sameAs: [
-        "https://www.google.com/maps?cid=XXXXXXXX", // cuando lo tengáis
-      ],
-    }),
-  }}
-/>;

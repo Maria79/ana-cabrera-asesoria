@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Servicios de asesoría en La Laguna | Fernández & Rodríguez",
+  title: "Servicios de asesoría en La Laguna | CyB Gestión",
   description:
     "Servicios de asesoría fiscal, contable y laboral en La Laguna, Tenerife. IGIC, renta, autónomos, empresas y gestión laboral.",
 };

@@ -55,7 +55,7 @@ export async function POST(req) {
 
     // 1) Email interno (a la asesoría)
     await transporter.sendMail({
-      from: `"Web Fernández & Rodríguez" <${gmailUser}>`,
+      from: `"Web CyB Gestión" <${gmailUser}>`,
       to: receiver,
       replyTo: isEmail(contact) ? contact : undefined,
       subject: `Nueva consulta web – ${name}`,
@@ -72,17 +72,17 @@ export async function POST(req) {
     // 2) Confirmación automática al cliente (solo si contact es email)
     if (isEmail(contact)) {
       await transporter.sendMail({
-        from: `"Fernández & Rodríguez" <${gmailUser}>`,
+        from: `"CyB Gestión" <${gmailUser}>`,
         to: contact,
         subject: "Hemos recibido tu consulta",
         html: `
           <p>Hola ${name},</p>
-          <p>Gracias por escribir a <strong>Fernández & Rodríguez</strong>.</p>
+          <p>Gracias por escribir a <strong>CyB Gestión</strong>.</p>
           <p>Hemos recibido tu consulta y te responderemos lo antes posible.</p>
           <p><strong>Resumen:</strong> ${topic ? topic : "Consulta general"}</p>
           <p style="margin-top:12px"><em>Este mensaje es automático. Si necesitás añadir información, podés responder a este correo.</em></p>
           <p style="margin-top:18px">
-            Fernández & Rodríguez<br/>
+            CyB Gestión<br/>
             La Laguna, Tenerife
           </p>
         `,

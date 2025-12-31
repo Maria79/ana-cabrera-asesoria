@@ -14,7 +14,7 @@ export default function TrustSection() {
         <div className="grid gap-10 md:grid-cols-2 md:items-center">
           <div>
             <h2 className="text-2xl font-semibold text-[var(--text)]">
-              Fernández & Rodríguez, una nueva etapa
+              CyB Gestión, una nueva etapa
             </h2>
             <p className="mt-3 text-[var(--muted)]">
               La asesoría mantiene los mismos servicios de siempre, ahora bajo

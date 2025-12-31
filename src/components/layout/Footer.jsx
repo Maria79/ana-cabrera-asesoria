@@ -23,11 +23,11 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--primary)] text-sm font-semibold text-white shadow-sm">
-                F&R
+                CyB
               </div>
               <div className="leading-tight">
                 <p className="text-base font-semibold text-[var(--text)]">
-                  Fernández & Rodríguez
+                  CyB Gestión
                 </p>
                 <p className="text-sm text-[var(--muted)]">
                   Asesoría Fiscal · Contable · Laboral
@@ -86,7 +86,7 @@ export default function Footer() {
                   <span className="font-medium text-[var(--text)]">
                     Horario:
                   </span>{" "}
-                  Lun–Vie 09:00–17:00
+                  Lun–Vie 08:00–14:00
                 </span>
               </li>
             </ul>
@@ -109,7 +109,7 @@ export default function Footer() {
                   className="text-[var(--muted)] hover:text-[var(--primary)]"
                   href="/sobre-nosotros"
                 >
-                  Sobre Ana
+                  Sobre nosotras
                 </Link>
               </li>
               <li>
@@ -149,10 +149,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col gap-3 border-t border-[var(--border)] pt-6 text-xs text-[var(--muted)] md:flex-row md:items-center md:justify-between">
-          <p>
-            © {new Date().getFullYear()} Fernández & Rodríguez · La Laguna,
-            Tenerife
-          </p>
+          <p>© {new Date().getFullYear()} CyB Gestión · La Laguna, Tenerife</p>
           <p>Servicios fiscales, contables y laborales · IGIC Canarias</p>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { FaWhatsapp, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 
-const WHATSAPP_NUMBER = "34646740176";
+const WHATSAPP_NUMBER = "346467401765";
 const PHONE_NUMBER = "922256767";
 
 export default function ContactSection() {

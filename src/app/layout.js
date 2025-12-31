@@ -9,47 +9,49 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "AccountingService",
-    name: "CyB Gestión",
-    image: "https://tudominio.com/og-image.jpg",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Calle El Juego-Pasaje Tunel de Aguere-Local 3º Derecha",
-      addressLocality: "San Cristóbal de La Laguna",
-      addressRegion: "Santa Cruz de Tenerife",
-      postalCode: "38201",
-      addressCountry: "ES",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: "28.4874",
-      longitude: "-16.3159",
-    },
-    url: "https://tudominio.com",
-    telephone: "+34 922 256 767",
-    priceRange: "€€",
-    openingHours: "Mo-Fr 08:00-14:00",
-    areaServed: "Tenerife",
-    sameAs: ["https://www.google.com/maps?cid=XXXXXXXX"],
-  };
-
   return (
-    <ClerkProvider>
-      <html lang="es">
-        <body>
-          {/* JSON-LD (LocalBusiness/AccountingService) */}
-          <Script
-            id="localbusiness-jsonld"
-            type="application/ld+json"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-          />
-
-          {children}
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[var(--bg)] text-[var(--text)]`}
+      >
+        <Header />
+        {children}
+        <Footer />
+        <StickyWhatsApp />
+      </body>
+    </html>
   );
 }
+
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "AccountingService",
+      name: "Fernández & Rodríguez",
+      image: "https://tudominio.com/og-image.jpg", // opcional
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Calle ________", // completar
+        addressLocality: "San Cristóbal de La Laguna",
+        addressRegion: "Santa Cruz de Tenerife",
+        postalCode: "38XXX",
+        addressCountry: "ES",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: "28.4874", // opcional
+        longitude: "-16.3159",
+      },
+      url: "https://tudominio.com",
+      telephone: "+34 922 256 767",
+      priceRange: "€€",
+      openingHours: "Mo-Fr 09:00-17:00",
+      areaServed: "Tenerife",
+      sameAs: [
+        "https://www.google.com/maps?cid=XXXXXXXX", // cuando lo tengáis
+      ],
+    }),
+  }}
+/>;

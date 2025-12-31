@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 import ContactForm from "../forms/ContactForm";
 
-const WHATSAPP_NUMBER = "34646740176";
+const WHATSAPP_NUMBER = "346467401765";
 const PHONE_NUMBER = "922256767";
 
 export default function HeroSection() {
